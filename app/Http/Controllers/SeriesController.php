@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SeriesFormRequest;
+use App\Http\Requests\SeriesFromRequest;
 use App\Models\Episode;
 use App\Models\Season;
 use App\Models\Series;
@@ -29,10 +30,9 @@ class SeriesController extends Controller
 
     public function store(SeriesFormRequest $request)
     {
-        $series = Series::create($request->all());
-        $seasons = [];
 
-       for ($i = 1; $i <= $request->seasonsQty; $i++) {
+        $series = Series::create($request->all());
+        for ($i = 1; $i <= $request->seasonsQty; $i++) {
           $seasons[]= [
               'series_id'=> $series->id,
                'number'=> $i,

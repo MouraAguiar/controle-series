@@ -1,5 +1,5 @@
 <x-layout title="Séries">
-    <a href={{route('series.create')}} class=" btn btn-dark">Adicionar</a>
+    <a href="{{ route('series.create') }} class=" btn-btn-primary m-3>Adicionar</a>
     @isset($mensagemSucesso)
     <div class="aler alert-success">
          {{$mensagemSucesso}}
