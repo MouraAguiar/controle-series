@@ -19,4 +19,5 @@ class Season extends Model
     {
         return $this->hasMany(Episode::class);
     }
+
 }

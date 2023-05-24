@@ -22,7 +22,7 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): voidcls
+    public function down(): void
     {
         Schema::dropIfExists('series');
 
